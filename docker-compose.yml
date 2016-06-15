@@ -1,0 +1,14 @@
+php:
+    image: seblegall/php-cli-docker
+    container_name: api_validator
+    volumes:
+        - "./:/srv/api-validator-bundle"
+    environment:
+        SSH_PRIVATE_KEY:
+        SSH_PUBLIC_KEY:
+        GITHUB_API_TOKEN:
+        GROUP_ID: 1000
+        USER_ID: 1000
+        GROUPNAME: dev
+        USERNAME: dev
+        HOMEDIR: /home/dev

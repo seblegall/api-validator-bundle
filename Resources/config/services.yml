@@ -1,0 +1,24 @@
+parameters:
+    api_validator.api_paramaters_listener.class: Seblegall\ApiValidatorBundle\EventListener\ApiParametersListener
+
+services:
+    api_validator.api_paramaters_listener:
+        class: %api_validator.api_paramaters_listener.class%
+        arguments: ["@annotation_reader", "@validator"]
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
+    api_validator.decoder_provider:
+        class: Seblegall\ApiValidatorBundle\Decoder\DecoderProvider
+        arguments: [%api_validator.decoders%]
+        calls:
+            - [setContainer, ["@service_container"]]
+
+    api_validator.decoder.json:
+        class: Seblegall\ApiValidatorBundle\Decoder\JsonDecoder
+
+    api_validator.content_type_listener:
+        class: Seblegall\ApiValidatorBundle\EventListener\ContentTypeListener
+        arguments: ["@api_validator.decoder_provider"]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }

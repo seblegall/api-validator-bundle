@@ -1,0 +1,5 @@
+api_validator_bundle:
+    resource: "@ApiValidatorBundle/Resources/config/routing.yml"
+
+example_bundle:
+    resource: "@ExampleBundle/Resources/config/routing.yml"

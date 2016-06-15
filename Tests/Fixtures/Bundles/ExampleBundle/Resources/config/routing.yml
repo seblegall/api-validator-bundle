@@ -1,0 +1,31 @@
+example_api:
+    path:     /example/api/ws-route
+    defaults: { _controller: ExampleBundle:Api:ws , _api_bag: Seblegall\ApiValidatorBundle\Tests\Fixtures\Bundles\ExampleBundle\Api\ExampleApiParameterBag }
+
+example2_api:
+    path:     /example/api/ws-annotations
+    defaults: { _controller: ExampleBundle:Api:ws2 }
+
+example3_api:
+    path:     /example/api/ws-route-validation
+    defaults: { _controller: ExampleBundle:Api:ws , _api_bag: Seblegall\ApiValidatorBundle\Tests\Fixtures\Bundles\ExampleBundle\Api\ExampleApiParameterBag, _api_validation: true }
+
+example4_api:
+    path:     /example/api/ws-annotations-validation
+    defaults: { _controller: ExampleBundle:Api:ws3 }
+
+example5_api:
+    path:     /example/api/ws-annotations-as
+    defaults: { _controller: ExampleBundle:Api:ws4 }
+
+example6_api:
+    path: /example/api/ws-routing-as
+    defaults: { _controller: ExampleBundle:Api:ws5 , _api_bag: Seblegall\ApiValidatorBundle\Tests\Fixtures\Bundles\ExampleBundle\Api\ExampleApiParameterBag, _api_as: apiParam }
+
+sub_coll_api:
+    path: /example/api/sub-collection-test
+    defaults:
+        _controller: ExampleBundle:Api:subCollection
+        _api_validation : true
+        _api_bag: Seblegall\ApiValidatorBundle\Tests\Fixtures\Bundles\ExampleBundle\Api\ExampleSubCollectionParameterBag
+        _api_as: apiParam

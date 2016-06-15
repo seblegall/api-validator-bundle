@@ -1,0 +1,42 @@
+Seblegall\ApiValidatorBundle\Tests\Fixtures\Bundles\ExampleBundle\Api\ExampleApiParameterBag:
+    properties:
+        parameters:
+            - Collection:
+                fields:
+                    page:
+                        - Type:
+                            type: numeric
+                        - Range:
+                            min: 1
+                    max:
+                        - Type:
+                            type: numeric
+                    sort:
+                        - Type:
+                            type: string
+                        - Choice:
+                            choices:  [id, name]
+                    created_at:
+                        - Date: ~
+                allowMissingFields: true
+                allowExtraFields: true
+
+Seblegall\ApiValidatorBundle\Tests\Fixtures\Bundles\ExampleBundle\Api\ExampleSubCollectionParameterBag:
+    properties:
+        parameters:
+            - Collection:
+                fields:
+                    filters:
+                        - Collection:
+                            fields:
+                                firstname:
+                                    - Type:
+                                        type: string
+                                lastname:
+                                    - Type:
+                                        type: string
+                            missingFieldsMessage: filter.missing_fields
+                    page:
+                        - Type:
+                            type: numeric
+                missingFieldsMessage: search.missing_fields

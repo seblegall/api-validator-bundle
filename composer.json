@@ -1,0 +1,29 @@
+{
+    "name": "Seblegall/api-validator-bundle",
+    "homepage": "https://github.com/seblegall/api-validator-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sébastien Le Gall",
+            "email": "seb@le-gall.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Seblegall\\ApiValidatorBundle\\": ""
+        }
+    },
+    "require": {
+        "symfony/framework-bundle": "~2.4|~3.0",
+        "doctrine/annotations": "~1.1",
+        "symfony/finder": "~2.4|~3.0"
+    },
+    "require-dev": {
+        "symfony/assetic-bundle": "~2.3",
+        "symfony/symfony": "~2.8",
+        "phpunit/phpunit": "~5.0",
+        "symfony/phpunit-bridge": "^3.1@dev"
+    }
+}
