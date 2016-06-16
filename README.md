@@ -1,5 +1,7 @@
 # Api Validator Bundle
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/seblegall/api-validator-bundle/master/LICENSE.md) [![Build Status](https://travis-ci.org/seblegall/api-validator-bundle.svg?branch=master)](https://travis-ci.org/seblegall/api-validator-bundle) [![Code Coverage](https://scrutinizer-ci.com/g/seblegall/api-validator-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/seblegall/api-validator-bundle/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/seblegall/api-validator-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/seblegall/api-validator-bundle/?branch=master)
+
 A Symfony's parameters bag based data validation bundle.
 
 ## Requirements
