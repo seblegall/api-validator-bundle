@@ -117,7 +117,7 @@ api_validator_bundle:
 
 ## Usage
 
-See [documentation](./Ressource/doc/index.md).
+See [documentation](./Resources/doc/index.md).
 
 ## License
 
